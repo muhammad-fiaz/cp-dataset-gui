@@ -1,0 +1,15 @@
+[project]
+name = "cp-dataset-gui"
+version = "0.1.0"
+description = "A collection and gui for managing, visualizing, and analyzing competitive programming datasets with a PyQt6 GUI."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "db-sqlite3>=0.0.1",
+    "pyqt6>=6.9.1",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.12.8",
+]
