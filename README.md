@@ -1,4 +1,8 @@
-# cp-dataset-gui
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a09cc3a6-7129-45c1-8646-6d04db495a6f"  alt="cp-dataset-gui logo" />
+</p>
+
+<h1 align="center">cp-dataset-gui</h1>
 
 [![License](https://img.shields.io/github/license/muhammad-fiaz/cp-dataset-gui?style=flat)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.12%2B-blue.svg)](https://www.python.org/downloads/release/python-3120/)
