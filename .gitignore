@@ -1,11 +1,120 @@
-# Python-generated files
+# Python bytecode and cache
 __pycache__/
-*.py[oc]
+*.py[cod]
+*$py.class
+
+# PyInstaller build artifacts
 build/
 dist/
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# PyInstaller bundled files
+*.manifest
+*.spec
+
+# Distribution / packaging
 wheels/
-*.egg-info
+*.egg-info/
+.eggs/
+*.bdist
+*.sdist
 
 # Virtual environments
-.venv
+.venv/
+env/
+ENV/
+env.bak/
+venv/
+.venv/
+*.env
+*.venv
+
+# SQLite databases
 *.db
+*.sqlite3
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+
+# IDEs and editors
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Test and coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+.pytest_cache/
+.pyre/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Mac and Linux
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Misc
+*.bak
+*.tmp
+
+# PyInstaller hidden files
+*.pid
+*.dll
+*.so
+*.dylib
+
+# Main PyInstaller spec file
+main.spec
+
+# Others for safety
+*.pyo
+*.orig
+*.rej
+
+# Backup files
+*.bak
+*.old
+*.orig
+*.save
+
+# Node
+node_modules/
+
+# Custom app artifacts
+cp_dataset.db
+
+# Assets - allow images, ignore temporary
+assets/tmp/
+assets/**/*.tmp
+
+# Exclude VS Code server settings (for codespaces/devcontainers)
+.vscode-server/
+
+# Windows specific
+desktop.ini
+
+# Python egg metadata
+*.egg
+
+# GitHub Codespaces
+.github/codespaces/
