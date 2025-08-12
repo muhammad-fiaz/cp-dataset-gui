@@ -2,11 +2,11 @@
 
 [![License](https://img.shields.io/github/license/muhammad-fiaz/cp-dataset-gui?style=flat)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.12%2B-blue.svg)](https://www.python.org/downloads/release/python-3120/)
-[![Build](https://github.com/muhammad-fiaz/cp-dataset-gui/actions/workflows/python-app.yml/badge.svg)](https://github.com/muhammad-fiaz/cp-dataset-gui/actions)
+[![CodeQL](https://github.com/muhammad-fiaz/cp-dataset-gui/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/muhammad-fiaz/cp-dataset-gui/actions/workflows/github-code-scanning/codeql)
 [![code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Linting: ruff](https://img.shields.io/badge/linting-ruff-blue?logo=python)](https://github.com/astral-sh/ruff)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://pre-commit.com/)
-[![Downloads](https://static.pepy.tech/badge/cp-dataset-gui)](https://pepy.tech/project/cp-dataset-gui)
+[![Dependabot Updates](https://github.com/muhammad-fiaz/cp-dataset-gui/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/muhammad-fiaz/cp-dataset-gui/actions/workflows/dependabot/dependabot-updates)
 [![Last Commit](https://img.shields.io/github/last-commit/muhammad-fiaz/cp-dataset-gui.svg?style=flat)](https://github.com/muhammad-fiaz/cp-dataset-gui/commits)
 [![Issues](https://img.shields.io/github/issues/muhammad-fiaz/cp-dataset-gui.svg)](https://github.com/muhammad-fiaz/cp-dataset-gui/issues)
 [![PRs](https://img.shields.io/github/issues-pr/muhammad-fiaz/cp-dataset-gui.svg)](https://github.com/muhammad-fiaz/cp-dataset-gui/pulls)
