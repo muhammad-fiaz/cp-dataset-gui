@@ -25,18 +25,15 @@ def check_pyinstaller():
 def build_command(current_platform):
     # Set --add-data flag syntax and icon flag
     if os.name == "nt":  # Windows
-        add_data = f"{ASSETS_SRC};assets"
+        add_data = f"{ASSETS_SRC}{os.pathsep}assets"
         icon_flag = ["--icon", str(ICON_PATH)] if ICON_PATH.exists() else []
     else:  # POSIX (Linux/macOS)
         add_data = f"{ASSETS_SRC}:assets"
-        # .ico icons are not supported on Linux/macOS for PyInstaller
-        icon_flag = (
-            ["--icon", str(ICON_PATH)]
-            if (
-                ICON_PATH.with_suffix(".icns").exists() and current_platform == "darwin"
-            )
-            else []
-        )
+        # .ico icons are not supported on Linux/macOS for PyInstaller, use .icns for macOS if available
+        if current_platform == "darwin" and ICON_PATH.with_suffix(".icns").exists():
+            icon_flag = ["--icon", str(ICON_PATH.with_suffix(".icns"))]
+        else:
+            icon_flag = []
 
     cmd = [
         "pyinstaller",
@@ -48,6 +45,17 @@ def build_command(current_platform):
         MAIN_SCRIPT,
     ]
     return cmd
+
+
+def copy_assets_to_dist():
+    """
+    Ensure the assets folder is present in the dist directory after build.
+    """
+    dist_assets = DIST_DIR / "assets"
+    if dist_assets.exists():
+        shutil.rmtree(dist_assets)
+    shutil.copytree(ASSETS_SRC, dist_assets)
+    print(f"Copied {ASSETS_SRC} to {dist_assets}.")
 
 
 def clean():
@@ -73,12 +81,14 @@ def main():
     cmd = build_command(current_platform)
     print(f"Running: {' '.join(map(str, cmd))}")
     subprocess.check_call(cmd)
+    # Copy assets folder to dist so it is available for the onefile binary
+    copy_assets_to_dist()
     if current_platform == "windows":
-        print("Your EXE is in the dist/ folder.")
+        print("Your EXE and assets are in the dist/ folder.")
     elif current_platform == "linux":
-        print("Your Linux binary is in the dist/ folder.")
+        print("Your Linux binary and assets are in the dist/ folder.")
     elif current_platform == "darwin":
-        print("Your macOS binary is in the dist/ folder.")
+        print("Your macOS binary and assets are in the dist/ folder.")
     else:
         print(f"Unsupported platform: {current_platform}")
         sys.exit(1)
