@@ -10,7 +10,7 @@ db==0.1.1
     # via db-sqlite3
 db-sqlite3==0.0.1
     # via cp-dataset-gui (pyproject.toml)
-fonttools==4.59.0
+fonttools==4.59.1
     # via matplotlib
 kiwisolver==1.4.9
     # via matplotlib
