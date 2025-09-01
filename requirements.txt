@@ -14,7 +14,7 @@ fonttools==4.59.0
     # via matplotlib
 kiwisolver==1.4.9
     # via matplotlib
-matplotlib==3.10.5
+matplotlib==3.10.6
     # via cp-dataset-gui (pyproject.toml)
 numpy==2.3.2
     # via
