@@ -16,7 +16,7 @@ kiwisolver==1.4.9
     # via matplotlib
 matplotlib==3.10.6
     # via cp-dataset-gui (pyproject.toml)
-numpy==2.3.3
+numpy==2.3.4
     # via
     #   contourpy
     #   matplotlib
